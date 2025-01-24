@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Company - Lightweight Website</title>
+    <meta name="description" content="A brief description of your website for SEO.">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <link rel="stylesheet" href="project.css"> <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="top-section">
+            <h1>Welcome to Your Company</h1>
+            <p>Your one-stop solution for all your needs.</p>
+            <button class="btn basic" aria-label="Get Started">Get Started</button>
+        </div>
+    </header>
+
+    <!-- Carousel Section -->
+    <section class="carousel">
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <img data-src="https://via.placeholder.com/2550x550" class="lazyload" alt="Carousel Image 1">
+                    </li>
+                    <li class="glide__slide">
+                        <img data-src="https://via.placeholder.com/2550x550" class="lazyload" alt="Carousel Image 2">
+                    </li>
+                    <li class="glide__slide">
+                        <img data-src="https://via.placeholder.com/2550x550" class="lazyload" alt="Carousel Image 3">
+                    </li>
+                </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<" aria-label="Previous Slide">Prev</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">" aria-label="Next Slide">Next</button>
+            </div>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0" aria-label="Slide 1"></button>
+                <button class="glide__bullet" data-glide-dir="=1" aria-label="Slide 2"></button>
+                <button class="glide__bullet" data-glide-dir="=2" aria-label="Slide 3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Grid Section -->
+    <section class="image-grid" aria-label="Gallery of Products">
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/2550x550" alt="Modern chandelier showcasing elegant design">
+        </div>
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/2550x550" alt="Elegant table lamp perfect for any room">
+        </div>
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/2550x550" alt="Stylish floor lamp that adds character to your space">
+        </div>
+    </section>
+
+    <!-- Contact Sections -->
+    <section class="contact-sections">
+        <div class="feedback-section">
+            <h2>We Value Your Feedback</h2>
+            <form id="feedback-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="btn basic">Submit Feedback</button>
+            </form>
+        </div>
+
+        <div class="newsletter-section">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletter-form">
+                <label for="newsletter-email">Email:</label>
+                <input type="email" id="newsletter-email" name="newsletter-email" required>
+                <button type="submit" class="btn basic">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <h2>Latest Articles</h2>
+        <article class="blog-post">
+            <h3><a href="#">Article Title 1</a></h3>
+            <p>Summary of the article goes here. This is a brief description to entice users to read more.</p>
+            <a href="#" class="btn basic">Read More</a>
+        </article>
+        <article class="blog-post">
+            <h3><a href="#">Article Title 2</a></h3>
+            <p>Summary of the article goes here. This is a brief description to entice users to read more.</p>
+            <a href="#" class="btn basic">Read More</a>
+        </article>
+        <article class="blog-post">
+            <h3><a href="#">Article Title 3</a></h3>
+            <p>Summary of the article goes here. This is a brief description to entice users to read more.</p>
+            <a href="#" class="btn basic">Read More</a>
+        </article>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="btn basic" style="display: none;">Back to Top</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="project.js"></script>
+</body>
+</html>

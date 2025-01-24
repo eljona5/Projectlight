@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #007BFF; /* Primary color for headings */
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF; /* Link color */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center the items */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.navbar li {
+    margin: 0 15px; /* Space between the items */
+}
+
+.navbar a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Padding for clickable area */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.navbar a:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Top Section Styles */
+.top-section {
+    padding: 20px;
+}
+
+/* Carousel Section */
+.carousel {
+    margin: 20px 0;
+}
+
+/* Image Grid Section */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Contact Sections */
+.contact-sections {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-around; /* Space between the sections */
+    padding: 20px;
+}
+
+.feedback-section, .newsletter-section {
+    width: 45%; /* Set width for each section */
+    background-color: #f8f9fa; /* Background color */
+    padding: 10px; /* Padding inside each section */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.feedback-section h2, .newsletter-section h2 {
+    margin-bottom: 10px; /* Space below headings */
+}
+
+.feedback-section label, .newsletter-section label {
+    display: block; /* Block display for labels */
+    margin: 5px 0; /* Space around labels */
+}
+
+.feedback-section input, .newsletter-section input, .feedback-section textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding for inputs */
+    margin-bottom: 10px; /* Space below inputs */
+}
+
+/* Button Styles */
+.btn {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Padding for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 20px;
+}
+
+.blog-post {
+    margin-bottom: 20px; /* Space between blog posts */
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.social-icons {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.social-icons li {
+    display: inline; /* Inline display for social icons */
+    margin: 0 10px; /* Space between icons */
+}
+
+.social-icons a {
+    color: white; /* Icon color */
+    font-size: 1.5em; /* Adjust size as needed */
+}
+
+/* Back to Top Button Styles */
+#back-to-top {
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Distance from bottom */
+    right: 20px; /* Distance from right */
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-sections {
+        flex-direction: column; /* Stack sections on smaller screens */
+        align-items: center; /* Center align items */
+    }
+
+    .feedback-section, .newsletter-section {
+        width: 90%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Space below sections */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* One column on mobile */
+    }
+
+    header {
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+    }
+}
