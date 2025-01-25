@@ -1,35 +1,36 @@
-// script.js
 
-document.addEventListener('DOMContentLoaded', function () {
+
+
+$(document).ready(function() {
+    // Initialize the Glide carousel
     const glide = new Glide('.glide', {
         type: 'carousel',
         perView: 1,
         breakpoints: {
-            600: {
-                perView: 2 // Show two images on tablets
+            768: {
+                perView: 1 // Show one image on mobile
             },
-            800: {
-                perView: 3 // Show three images on larger screens
+            1024: {
+                perView: 2 // Show two images on tablets
             }
-        },
-        autoplay: 3000,
-        animationDuration: 500,
-        animationTimingFunc: 'ease-in-out'
-   
-});
-    glide.mount(); // Mount the Glide instance
-
-    // Back to top button functionality
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-            $('#back-to-top').fadeIn(); // Show button
-        } else {
-            $('#back-to-top').fadeOut(); // Hide button
         }
     });
 
-    $('#back-to-top').click(function() {
-        $('html, body').animate({ scrollTop: 0 }, 800); // Smooth scroll to top
+    glide.mount();
+
+    // Back to Top button functionality
+    const backToTopButton = $('#back-to-top');
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            backToTopButton.fadeIn(); // Show button
+        } else {
+            backToTopButton.fadeOut(); // Hide button
+        }
+    });
+
+    backToTopButton.click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 600); // Smooth scroll to top
         return false;
     });
 
@@ -44,6 +45,13 @@ document.addEventListener('DOMContentLoaded', function () {
     $('#newsletter-form').on('submit', function(e) {
         e.preventDefault(); // Prevent the default form submission
         alert('Subscribed to newsletter! Thank you.'); // Show thank you message
+        $(this).trigger('reset'); // Reset the form
+    });
+
+    // Contact form submission
+    $('#contact-form').on('submit', function(e) {
+        e.preventDefault(); // Prevent the default form submission
+        alert('Message sent! Thank you for contacting us.'); // Show thank you message
         $(this).trigger('reset'); // Reset the form
     });
 });

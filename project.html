@@ -8,6 +8,7 @@
     <meta name="keywords" content="keyword1, keyword2, keyword3">
     <link rel="stylesheet" href="project.css"> <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"> <!-- Glide CSS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -18,50 +19,53 @@
 </head>
 <body>
     <header>
-        <nav class="navbar" role="navigation" aria-label="Main Navigation">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <h1>Your Company</h1>
+            <nav class="navbar" role="navigation" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="top-section">
-            <h1>Welcome to Your Company</h1>
+            <h2>Welcome to Your Company</h2>
             <p>Your one-stop solution for all your needs.</p>
             <button class="btn basic" aria-label="Get Started">Get Started</button>
         </div>
     </header>
 
-    <!-- Carousel Section -->
-    <section class="carousel">
-        <div class="glide">
-            <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
-                    <li class="glide__slide">
-                        <img data-src="https://via.placeholder.com/2550x550" class="lazyload" alt="Carousel Image 1">
-                    </li>
-                    <li class="glide__slide">
-                        <img data-src="https://via.placeholder.com/2550x550" class="lazyload" alt="Carousel Image 2">
-                    </li>
-                    <li class="glide__slide">
-                        <img data-src="https://via.placeholder.com/2550x550" class="lazyload" alt="Carousel Image 3">
-                    </li>
-                </ul>
+    <main>
+        <section class="carousel">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <img data-src="https://via.placeholder.com/2550x550" class="lazyload" alt="Slide 1">
+                        </li>
+                        <li class="glide__slide">
+                            <img data-src="https://via.placeholder.com/2550x550" class="lazyload" alt="Slide 2">
+                        </li>
+                        <li class="glide__slide">
+                            <img data-src="https://via.placeholder.com/2550x550" class="lazyload" alt="Slide 3">
+                        </li>
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">Prev</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">Next</button>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                </div>
             </div>
-            <div class="glide__arrows" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left" data-glide-dir="<" aria-label="Previous Slide">Prev</button>
-                <button class="glide__arrow glide__arrow--right" data-glide-dir=">" aria-label="Next Slide">Next</button>
-            </div>
-            <div class="glide__bullets" data-glide-el="controls[nav]">
-                <button class="glide__bullet" data-glide-dir="=0" aria-label="Slide 1"></button>
-                <button class="glide__bullet" data-glide-dir="=1" aria-label="Slide 2"></button>
-                <button class="glide__bullet" data-glide-dir="=2" aria-label="Slide 3"></button>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Image Grid Section -->
+           <!-- Image Grid Section -->
     <section class="image-grid" aria-label="Gallery of Products">
         <div class="grid-item">
             <img src="https://via.placeholder.com/2550x550" alt="Modern chandelier showcasing elegant design">
@@ -74,53 +78,78 @@
         </div>
     </section>
 
-    <!-- Contact Sections -->
-    <section class="contact-sections">
-        <div class="feedback-section">
-            <h2>We Value Your Feedback</h2>
+        <!-- Feedback Section -->
+        <section id="feedback" class="feedback-section">
+            <h2>Feedback</h2>
             <form id="feedback-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit" class="btn basic">Submit Feedback</button>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn">Submit Feedback</button>
             </form>
-        </div>
+        </section>
 
-        <div class="newsletter-section">
+        <!-- Newsletter Section -->
+        <section id="newsletter" class="newsletter-section">
             <h2>Subscribe to Our Newsletter</h2>
             <form id="newsletter-form">
                 <label for="newsletter-email">Email:</label>
                 <input type="email" id="newsletter-email" name="newsletter-email" required>
-                <button type="submit" class="btn basic">Subscribe</button>
+                <button type="submit" class="btn">Subscribe</button>
             </form>
-        </div>
-    </section>
+        </section>
 
-    <!-- Blog Section -->
-    <section class="blog-section">
-        <h2>Latest Articles</h2>
-        <article class="blog-post">
-            <h3><a href="#">Article Title 1</a></h3>
-            <p>Summary of the article goes here. This is a brief description to entice users to read more.</p>
-            <a href="#" class="btn basic">Read More</a>
-        </article>
-        <article class="blog-post">
-            <h3><a href="#">Article Title 2</a></h3>
-            <p>Summary of the article goes here. This is a brief description to entice users to read more.</p>
-            <a href="#" class="btn basic">Read More</a>
-        </article>
-        <article class="blog-post">
-            <h3><a href="#">Article Title 3</a></h3>
-            <p>Summary of the article goes here. This is a brief description to entice users to read more.</p>
-            <a href="#" class="btn basic">Read More</a>
-        </article>
-    </section>
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing the best services to our customers. Our team is experienced and ready to assist you with your needs.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Service 1: Description of service 1.</li>
+                <li>Service 2: Description of service 2.</li>
+                <li>Service 3: Description of service 3.</li>
+            </ul>
+        </section>
+        <section class="blog-section">
+            <h2>Latest Articles</h2>
+            <article class="blog-post">
+                <h3><a href="#">Article Title 1</a></h3>
+                <p>Summary of the article goes here. This is a brief description to entice users to read more.</p>
+                <a href="#" class="btn basic">Read More</a>
+            </article>
+            <article class="blog-post">
+                <h3><a href="#">Article Title 2</a></h3>
+                <p>Summary of the article goes here. This is a brief description to entice users to read more.</p>
+                <a href="#" class="btn basic">Read More</a>
+            </article>
+            <article class="blog-post">
+                <h3><a href="#">Article Title 3</a></h3>
+                <p>Summary of the article goes here. This is a brief description to entice users to read more.</p>
+                <a href="#" class="btn basic">Read More</a>
+            </article>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="contact-name">Name:</label>
+                <input type="text" id="contact-name" name="contact-name" required>
+                <label for="contact-email">Email:</label>
+                <input type="email" id="contact-email" name="contact-email" required>
+                <label for="contact-message">Message:</label>
+                <textarea id="contact-message" name="contact-message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-content">
@@ -140,4 +169,4 @@
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
     <script src="project.js"></script>
 </body>
-</html>
+</html> 
